@@ -6,6 +6,7 @@ WORKDIR /
 
 RUN apk --no-cache add curl && \
     curl https://github.com/fatedier/frp/releases/download/v${VERSION}/frp_${VERSION}_linux_amd64.tar.gz && \
+    ls -l && \
     apk --no-cache add tar && \
     tar -xvzf frp_${VERSION}_darwin_amd64.tar.gz && \
     mkdir frp && \
