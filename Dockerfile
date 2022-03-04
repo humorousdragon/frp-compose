@@ -2,7 +2,10 @@ FROM  alpine:3.15.0
 
 ARG VERSION=0.39.1
 
-RUN  mkdir home 
+RUN  ls
+
+#     mkdir home 
+
 WORKDIR home
 
 RUN tar --version && \
