@@ -8,13 +8,13 @@ RUN  ls
 
 WORKDIR home
 
-RUN tar --version && \
-    apk --no-cache add curl && \
-    curl https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz && \
-    pwd && \
-    apk add --upgrade --no-cache tar && \
+RUN tar --version #&& \
+RUN apk --no-cache add curl #&& \
+RUN curl https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz #&& \
+RUN pwd # && \
+RUN apk add --upgrade --no-cache tar # && \
     
-    ls && \
+RUN    ls && \
 #    apk --no-cache add tar && \
     tar -xvzf frp_0.39.1_linux_amd64.tar.gz && \
     mkdir frp && \
