@@ -4,7 +4,8 @@ ARG VERSION=0.39.1
 
 WORKDIR /
 
-RUN apk --no-cache add tar curl && \
+RUN apk --no-cache add curl && \
+    apk --no-cache add tar && \
     curl https://github.com/fatedier/frp/releases/download/v${VERSION}/frp_${VERSION}_linux_amd64.tar.gz && \
     tar -xvzf frp_${VERSION}_darwin_amd64.tar.gz && \
     mkdir frp && \
