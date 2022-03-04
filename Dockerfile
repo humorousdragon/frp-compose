@@ -2,7 +2,8 @@ FROM  alpine:3.15.0
 
 ARG VERSION=0.39.1
 
-WORKDIR /
+RUN  mkdir home 
+WORKDIR home
 
 RUN tar --version && \
     apk --no-cache add curl && \
