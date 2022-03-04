@@ -9,7 +9,7 @@ RUN apk --no-cache add curl && \
     pwd && \
     ls -l && \
     apk --no-cache add tar && \
-    tar -xvzf frp_${VERSION}_darwin_amd64.tar.gz && \
+    tar -xvzf frp_0.39.1_linux_386.tar.gz && \
     mkdir frp && \
     mv frp_${VERSION}_darwin_amd64 frp && \
     rm frp_${VERSION}_darwin_amd64.tar.gz
