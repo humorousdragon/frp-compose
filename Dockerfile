@@ -1,6 +1,6 @@
 FROM  alpine:3.15.0
 
-ARG VERSION = 0.39.1
+ARG VERSION=0.39.1
 
 WORKDIR /
 
