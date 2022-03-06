@@ -1,0 +1,14 @@
+version: "1"
+services:
+  frpsa:
+    build:
+      context: ./
+      dockerfile: Dockerfile.build
+    ports:
+     - "6000:6000"
+     - "7500:7500"
+     - "6001:6001"
+  frpca:
+    build:
+      depends_on:
+       - frpsa
