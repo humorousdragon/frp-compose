@@ -14,7 +14,7 @@ RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
 # RUN mkdir frp
 # RUN ls -l
 
-RUN mv /home/ubuntu/frp_0.39.1_linux_amd64/* frp/
+RUN mv ~/home/ubuntu/frp_0.39.1_linux_amd64/* frp/
 # RUN ls -l frp/
 
 
