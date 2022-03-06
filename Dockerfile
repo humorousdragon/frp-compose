@@ -11,10 +11,11 @@ RUN wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_li
 
 RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
 # RUN ls -l
-# RUN mkdir frp
+RUN mkdir frp
 # RUN ls -l
 
 RUN mv frp_0.39.1_linux_amd64/* frp/
+
 # RUN ls -l frp/
 
 
