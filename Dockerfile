@@ -23,7 +23,7 @@ RUN rm frp_0.39.1_linux_amd64.tar.gz
 WORKDIR /frp/
 RUN ls -l 
 
-COPY frpc.ini .
+COPY frpc.ini frp/
 
 RUN pwd
 RUN ls -l
