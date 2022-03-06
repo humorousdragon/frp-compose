@@ -1,0 +1,17 @@
+FROM  alpine:3.15.0
+
+ARG VERSION=0.39.1
+
+WORKDIR /home
+
+RUN wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz
+
+RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
+RUN mkdir frp
+RUN mv frp_0.39.1_linux_amd64/* frp/
+RUN rm frp_0.39.1_linux_amd64.tar.gz 
+WORKDIR /home/frp
+COPY frps.ini ./home/frp
+
+# EXPOSE 80
+ENTRYPOINT [ "~/frp/frps", "-c", "~/frp/frps.ini"  ]

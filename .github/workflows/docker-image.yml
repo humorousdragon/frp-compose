@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag frps-server:$(date +%s)
+      run: |
+      docker build . --file Dockerfile --tag frps-server:$(date +%s)
+      docker build . --file Dockerfile.build --tag frps-server:$(date +%s)
