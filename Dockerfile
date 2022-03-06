@@ -10,9 +10,9 @@ WORKDIR /home/ubuntu/
 RUN wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz
 
 RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
-RUN ls
+RUN ls -l
 RUN mkdir frp
-RUN mv /frp_0.39.1_linux_amd64/* /frp/
+RUN mv frp_0.39.1_linux_amd64/* frp/
 RUN rm frp_0.39.1_linux_amd64.tar.gz 
 
 WORKDIR /frp
