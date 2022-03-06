@@ -6,7 +6,7 @@ RUN  ls
 
 #     mkdir home 
 
-WORKDIR home
+WORKDIR /home/ubuntu/
 
 RUN tar --version
 RUN apk --no-cache add curl
@@ -24,7 +24,7 @@ RUN rm frp_0.39.1_linux_amd64.tar.gz
 #    rm frp_${VERSION}_darwin_amd64.tar.gz
 
 WORKDIR /frp
-
+RUN ls
 COPY frpc.ini .
 
 
