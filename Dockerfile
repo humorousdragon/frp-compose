@@ -4,15 +4,14 @@ ARG VERSION=0.39.1
 
 RUN  ls
 
-#     mkdir home 
-
 WORKDIR /home/ubuntu/
 
-RUN tar --version
-RUN apk --no-cache add curl
+# RUN apk --no-cache add curl
 RUN wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz
 # RUN pwd
-RUN apk add --upgrade --no-cache tar
+
+# RUN tar --version
+# RUN apk add --upgrade --no-cache tar
 RUN ls
 #    apk --no-cache add tar && \
 RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
@@ -24,10 +23,11 @@ RUN rm frp_0.39.1_linux_amd64.tar.gz
 #    rm frp_${VERSION}_darwin_amd64.tar.gz
 
 WORKDIR /frp
-RUN ls
+
 COPY frpc.ini .
 
-
+RUN pwd
+RUN ls -l
 # mkdir config log && \
 #    mv *.ini config && \
 #    ln -s config/frps.ini ./frps.ini && \
