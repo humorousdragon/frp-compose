@@ -13,10 +13,12 @@ RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
 RUN ls -l
 RUN mkdir frp
 RUN ls -l
+
 RUN mv frp_0.39.1_linux_amd64/* frp/
 RUN rm frp_0.39.1_linux_amd64.tar.gz 
 
 WORKDIR /frp
+RUN ls -l 
 
 COPY frpc.ini .
 
