@@ -8,17 +8,17 @@ RUN  ls
 
 WORKDIR home
 
-RUN tar --version #&& \
-RUN apk --no-cache add curl #&& \
-RUN wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz #&& \
-RUN pwd # && \
-RUN apk add --upgrade --no-cache tar # && \
-RUN ls && \
+RUN tar --version
+RUN apk --no-cache add curl
+RUN wget https://github.com/fatedier/frp/releases/download/v0.39.1/frp_0.39.1_linux_amd64.tar.gz
+# RUN pwd
+RUN apk add --upgrade --no-cache tar
+RUN ls
 #    apk --no-cache add tar && \
-    tar -xvzf frp_0.39.1_linux_amd64.tar.gz && \
-    mkdir frp && \
-    mv frp_0.39.1_linux_amd64.tar.gz frp && \
-    rm frp_0.39.1_linux_amd64.tar.gz 
+RUN tar -xvzf frp_0.39.1_linux_amd64.tar.gz
+RUN mkdir frp
+RUN mv frp_0.39.1_linux_amd64/* frp/
+RUN rm frp_0.39.1_linux_amd64.tar.gz 
 
 #    mv frp_${VERSION}_darwin_amd64 frp && \
 #    rm frp_${VERSION}_darwin_amd64.tar.gz
@@ -34,7 +34,5 @@ COPY frpc.ini .
 #    ln -s config/frpc.ini ./frpc.ini
 
 # VOLUME /frp/config /frp/log
-
 # EXPOSE 80
-
 ENTRYPOINT [ "/frp/frpc", "-c", "/frp/frpc.ini"  ]
