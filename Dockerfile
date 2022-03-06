@@ -17,4 +17,4 @@ RUN pwd
 RUN cat frpc.ini
 
 # EXPOSE 80
-ENTRYPOINT [ "~/frp/frpc", "-c", "~/frp/frpc.ini"  ]
+ENTRYPOINT [ "/frp/frpc", "-c", "/frp/frpc.ini"  ]

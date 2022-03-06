@@ -14,4 +14,4 @@ WORKDIR /home/frp
 COPY frps.ini ./home/frp
 
 # EXPOSE 80
-ENTRYPOINT [ "/frp/frps", "-c", "/frp/frps.ini" ]
+ENTRYPOINT [ "/home/ubuntu/frp/frps", "-c", "/home/ubuntu/frp/frps.ini" ]
