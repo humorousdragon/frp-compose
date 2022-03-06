@@ -11,7 +11,8 @@ RUN mkdir frp
 RUN mv frp_0.39.1_linux_amd64/* frp/
 RUN rm frp_0.39.1_linux_amd64.tar.gz 
 WORKDIR /home/frp
-COPY frps.ini ./home/frp
+COPY frps.ini .
+# COPY frps.ini ./home/frp
 
 # EXPOSE 80
-ENTRYPOINT [ "/home/ubuntu/frp/frps", "-c", "/home/ubuntu/frp/frps.ini" ]
+ENTRYPOINT [ "/home/frp/frps", "-c", "/home/frp/frps.ini" ]
